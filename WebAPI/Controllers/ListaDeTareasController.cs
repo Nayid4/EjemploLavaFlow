@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebAPI.Modelo;
 
 namespace WebAPI.Controllers
 {
@@ -15,6 +16,8 @@ namespace WebAPI.Controllers
         // Lava Flow: Se mantiene una lista estática, aunque podría ser reemplazada por una base de datos
         private static readonly List<ListaDeTarea> _listasDeTareas = new List<ListaDeTarea>();
         private static readonly List<ListaDeTarea> _listasDeTareasObsoletas = new List<ListaDeTarea>(); // Nunca se usa
+
+        private Persona persona = new Persona();
 
         [HttpGet]
         public IActionResult GetAll()
